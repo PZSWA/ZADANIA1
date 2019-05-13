@@ -16,7 +16,10 @@ int main () {
   {
       this_thread::sleep_for(1s);
       #pragma omp master
+      {
+	  
       cout << "I am in a master thread, my id is = " << omp_get_thread_num() << endl;
+		}
   }  
 
 }

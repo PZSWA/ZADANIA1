@@ -16,12 +16,24 @@ void fun( int t ) {
 //KOMENTARZ DO ZADANIA 6
 
 int main () {
+	       #pragma omp parallel num_threads(6)
+	       {
+	       	#pragma omp single
+			   {
+		   #pragma omp task
            fun(3); 
+           #pragma omp task
            fun(3); 
+           #pragma omp task
            fun(4); 
+           #pragma omp task
            fun(4); 
+           #pragma omp task
            fun(5); 
-           fun(5); 
+           #pragma omp task
+           fun(5);
+       }
+	}
 }
 
 

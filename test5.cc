@@ -14,8 +14,10 @@ int main () {
     // oraz tak dobierz opcje optymalizujaca wysylanie
     // kolejnych iteracji do watkow, zeby liczylo sie to
     // istotnie szybciej, niz w przypadku domyslnej strategii
-
+    #pragma omp parallel default(none) num_threads(4) 
+    {
+    #pragma omp for schedule(static, 1)
       for (int i=0; i<16; ++i) fun(i);
-
+    }
 }
 
