@@ -5,7 +5,7 @@ using namespace std;
 int main () {
 
   int n_threads, thread_id;
-
+	//TEST
   // Utworz blok rownolegly 4 watkow przekazujac kazdemu z nich kopie
   // zmiennej  n_threads oraz thread_id
   //

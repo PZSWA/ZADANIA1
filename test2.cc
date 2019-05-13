@@ -5,7 +5,7 @@ using namespace std;
 int main () {
 
   int c = 0;
-
+	//TEST 2 plik
   // Ponizszy kod to przyklad data race
   // Najpierw go uruchom i poobeserwuj nastepnie
   // tak zmodyfikuj, zeby na ekranie wypisaly sie
