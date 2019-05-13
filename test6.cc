@@ -13,6 +13,8 @@ void fun( int t ) {
 // wykonywal sie niewiele dluzej niz 5 sekund, zakladajac ze mamy
 // do wykorzystania 6 lub wiecej watkow
 
+//KOMENTARZ DO ZADANIA 6
+
 int main () {
            fun(3); 
            fun(3); 

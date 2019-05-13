@@ -11,11 +11,12 @@ int main () {
   // W miejsce ... uzyj odpowiedniej procedury
   // Wszystkie watki maja tylko wykonac sleep_for
   // UWAGA prosze pamietac o kompilowaniu z opcja -std=c++11 lub wyzsze c++14, c++17
-
+ 
   #pragma omp parallel num_threads(8)
   {
       this_thread::sleep_for(1s);
-      cout << "I am in a master thread, my id is = " << ... << endl;
+      #pragma omp master
+      cout << "I am in a master thread, my id is = " << omp_get_thread_num() << endl;
   }  
 
 }
