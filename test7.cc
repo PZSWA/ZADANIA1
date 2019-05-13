@@ -18,7 +18,7 @@ omp_lock_t locka, lockb;
 // Inicjalizacja blokad locks
 omp_init_lock(&locka);
 omp_init_lock(&lockb);
-
+//TEST 7777777777777777777777777777777777777
 // Blok rownolegly
 #pragma omp parallel shared(a, b, nthreads, locka, lockb) private(tid) num_threads(4)
   {

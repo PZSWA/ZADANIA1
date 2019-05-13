@@ -11,18 +11,20 @@ int main () {
   //
   // Do zmiennej thread_id przypisz numer biezacego watku
   // i ponizsza linia wypisze ten numer
-
-     thread_id = ... ;
+     #pragma omp parallel num_threads(4)
+     {
+	 
+     thread_id = omp_get_thread_num() ;
      cout << "Watek nr = " << thread_id << endl;
-
+     
      // Niech watek glowny wykona ponizszy kawalek kodu
-     if (thread_id == ... ) 
+     if (thread_id == 0 ) 
      {
           // Do n_threads przypisz liczbe watkow
-          n_threads =  ... ;
+          n_threads =  omp_get_num_threads() ;
           cout << "Liczba watkow = " << n_threads << endl;
      }
-
+}
      // ### UWAGA powyzej w miejsca ... nalezy cos wpisac
 
 }
